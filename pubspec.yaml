@@ -1,0 +1,51 @@
+name: todo_app
+description: "A multi-vendor ecommerce app"
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.4.3 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.6
+  flutter_screenutil: ^5.9.0
+  carousel_slider: ^4.2.1
+  # flutter_inappwebview: ^5.8.0
+  # webview_flutter: ^4.4.4
+  flutter_rating_bar: ^4.0.1
+  retrofit: ^4.0.3
+  pin_code_fields: ^8.0.1
+  json_annotation: ^4.7.0
+  hive_flutter: ^1.1.0
+  dio: ^5.4.0
+  intl: ^0.18.1
+  hooks_riverpod: ^2.4.9
+  cached_network_image: ^3.2.3
+  flutter_svg: ^2.0.9
+  local_auth: ^2.1.6
+
+dev_dependencies:
+  build_runner: ^2.3.2
+  hive_generator: ^2.0.0
+  import_sorter: ^4.6.0
+  json_serializable: ^6.5.4
+  retrofit_generator: ^8.0.5
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/fonts/
+    - assets/svgs/
+    - assets/png/
+    - assets/animations/
+    - assets/animations/noNetwork.json
