@@ -5,9 +5,14 @@ class TodoScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('TODO SCREEN'),
+    return Scaffold(
+      body: Column(
+        children: [
+          Center(
+            child: Text('TODO SCREEN'),
+          ),
+          // StartPage(),
+        ],
       ),
     );
   }

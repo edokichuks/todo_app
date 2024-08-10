@@ -208,7 +208,7 @@ class _AppFormFieldState extends State<AppFormField> {
                   borderRadius: BorderRadius.circular(widget.borderRadius),
                   borderSide: widget.borderSide ??
                       const BorderSide(
-                        color: AppColors.brandBrown,
+                        color: AppColors.primary,
                         width: 1,
                       ),
                 ),

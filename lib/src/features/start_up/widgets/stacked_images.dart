@@ -24,7 +24,7 @@ class ImageStack extends StatelessWidget {
             width: 260.w,
             alignment: Alignment.bottomLeft,
             margin: EdgeInsets.only(
-              left: 12.sh,
+              left: 12,
             ),
           ),
           CustomIconButton(
