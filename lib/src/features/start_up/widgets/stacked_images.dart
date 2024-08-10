@@ -1,6 +1,10 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
 
+// Package imports:
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+// Project imports:
 import 'package:todo_app/src/core/utils/styles/theme_helper.dart';
 import 'package:todo_app/src/general_widgets/custom_icon_button.dart';
 import 'package:todo_app/src/general_widgets/general_widget_exports.dart';
@@ -23,7 +27,7 @@ class ImageStack extends StatelessWidget {
             height: 184.h,
             width: 260.w,
             alignment: Alignment.bottomLeft,
-            margin: EdgeInsets.only(
+            margin: const EdgeInsets.only(
               left: 12,
             ),
           ),

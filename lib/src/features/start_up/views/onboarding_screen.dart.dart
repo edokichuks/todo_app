@@ -1,5 +1,10 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Package imports:
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+// Project imports:
 import 'package:todo_app/src/core/utils/colors.dart';
 import 'package:todo_app/src/core/utils/margin_util.dart';
 import 'package:todo_app/src/core/utils/styles/theme_helper.dart';
@@ -9,10 +14,7 @@ import 'package:todo_app/src/general_widgets/custom_icon_button.dart';
 import 'package:todo_app/src/general_widgets/general_widget_exports.dart';
 
 class OnboardingScreen extends StatelessWidget {
-  const OnboardingScreen({Key? key})
-      : super(
-          key: key,
-        );
+  const OnboardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -36,12 +38,6 @@ class OnboardingScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            // const YMargin(60),
-            // SizedBox(
-            //   height: 43.h,
-            //   width: 134.w,
-            //   child: AppLogo(),
-            // ),
             CustomIconButton(
               height: 50.r,
               width: 50.r,
@@ -58,7 +54,6 @@ class OnboardingScreen extends StatelessWidget {
               ),
             ),
             const ImageStack(),
-
             Padding(
               padding: EdgeInsets.only(
                 top: 60.r,
@@ -101,45 +96,6 @@ class OnboardingScreen extends StatelessWidget {
                     ));
               },
             ),
-            // Padding(
-            //   padding: EdgeInsets.only(
-            //     top: 10.h,
-            //     bottom: 5.h,
-            //   ),
-            //   child: Row(
-            //     mainAxisAlignment: MainAxisAlignment.center,
-            //     children: [
-            //       Padding(
-            //         padding: EdgeInsets.only(
-            //           bottom: 1.h,
-            //         ),
-            //         child: Text(
-            //           "Already have an account?",
-            //           overflow: TextOverflow.ellipsis,
-            //           textAlign: TextAlign.left,
-            //           // style:
-            //           //     TextThemeHelper.bodyMediumSFProTextGray30001.copyWith(
-            //           //   letterSpacing: 0.24,
-            //           // ),
-            //         ),
-            //       ),
-            //       GestureDetector(
-
-            //         child: Padding(
-            //           padding: EdgeInsets.only(
-            //             left: 11,
-            //           ),
-            //           child: Text(
-            //             "Sign in",
-            //             overflow: TextOverflow.ellipsis,
-            //             textAlign: TextAlign.left,
-            //             // style: TextThemeHelper.titleSmallOnError,
-            //           ),
-            //         ),
-            //       ),
-            //     ],
-            //   ),
-            // ),
           ],
         ),
       ),

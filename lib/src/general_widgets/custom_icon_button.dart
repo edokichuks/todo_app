@@ -1,10 +1,12 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:todo_app/src/core/utils/styles/theme_helper.dart';
 
-
 class CustomIconButton extends StatelessWidget {
-  CustomIconButton({
-    Key? key,
+  const CustomIconButton({
+    super.key,
     this.alignment,
     this.margin,
     this.width,
@@ -13,9 +15,7 @@ class CustomIconButton extends StatelessWidget {
     this.decoration,
     this.child,
     this.onTap,
-  }) : super(
-          key: key,
-        );
+  });
 
   final Alignment? alignment;
 

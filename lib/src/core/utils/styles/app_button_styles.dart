@@ -1,6 +1,7 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+// Package imports:
 
 // Project imports:
 import 'package:todo_app/src/core/utils/colors.dart';
@@ -18,7 +19,7 @@ class AppButtonStyle {
   static const double buttonDefaultWidth = double.infinity;
   static const double badgeDefaultHeight = 20.0;
   static const double badgeDefaultWidth = 46.0;
-  static const  double buttonCornerRadius = 16.0;
+  static const double buttonCornerRadius = 16.0;
   static const double badgeCornerRadius = 100.0;
   static const bool buttonIsEnable = true;
   static const bool buttonIsLoading = false;

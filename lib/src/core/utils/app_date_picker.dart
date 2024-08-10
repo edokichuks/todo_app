@@ -1,8 +1,11 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
+
+// Package imports:
+
+// Project imports:
 import 'package:todo_app/src/core/extensions/date_extensions.dart';
 import 'package:todo_app/src/core/utils/utils_exports.dart';
-
 
 Future<String?> openDatePicker({
   required BuildContext context,
@@ -19,7 +22,7 @@ Future<String?> openDatePicker({
       builder: (BuildContext context, child) {
         return Theme(
           data: ThemeData.light().copyWith(
-            colorScheme: ColorScheme.light(
+            colorScheme: const ColorScheme.light(
               primary: AppColors.primary,
             ),
           ),

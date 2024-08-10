@@ -47,7 +47,7 @@ class _MyAppState extends State<MyApp> {
           title: 'Todo App',
           routes: AppRouter.routes,
           debugShowCheckedModeBanner: false,
-         theme: ThemeData(
+          theme: ThemeData(
               visualDensity: VisualDensity.adaptivePlatformDensity,
               fontFamily: 'Mark Pro',
               scaffoldBackgroundColor: Colors.white,

@@ -1,4 +1,6 @@
-import 'dart:ui';
+// Dart imports:
+
+// Flutter imports:
 import 'package:flutter/material.dart';
 
 String _appTheme = "primary";
@@ -6,18 +8,18 @@ String _appTheme = "primary";
 /// Helper class for managing themes and colors.
 class ThemeHelper {
   // A map of custom color themes supported by the app
-  Map<String, PrimaryColors> _supportedCustomColor = {
+  final Map<String, PrimaryColors> _supportedCustomColor = {
     'primary': PrimaryColors()
   };
 
 // A map of color schemes supported by the app
-  Map<String, ColorScheme> _supportedColorScheme = {
+  final Map<String, ColorScheme> _supportedColorScheme = {
     'primary': ColorSchemes.primaryColorScheme
   };
 
-  /// Changes the app theme to [_newTheme].
-  void changeTheme(String _newTheme) {
-    _appTheme = _newTheme;
+  /// Changes the app theme to [newTheme].
+  void changeTheme(String newTheme) {
+    _appTheme = newTheme;
   }
 
   /// Returns the primary colors for the current theme.
@@ -70,7 +72,7 @@ class ThemeHelper {
         ),
       ),
       radioTheme: RadioThemeData(
-        fillColor: MaterialStateProperty.all<Color>(appTheme.greenA700),
+        fillColor: WidgetStateProperty.all<Color>(appTheme.greenA700),
         visualDensity: const VisualDensity(
           vertical: -4,
           horizontal: -4,
@@ -158,7 +160,6 @@ class ColorSchemes {
     onErrorContainer: Color(0XFFFFFFFF),
     outline: Color(0XFF0E0E0E),
     onSurfaceVariant: Color(0XFF0E0E0E),
-    onBackground: Color(0X7FB1B0B0),
     outlineVariant: Color(0XFF58028C),
     errorContainer: Color(0XFFF30909),
     onSurface: Color(0X7FB1B0B0),
@@ -169,11 +170,10 @@ class ColorSchemes {
     tertiary: Color(0XFF58028C),
     surfaceTint: Color(0XFF0E0E0E),
     onTertiaryContainer: Color(0XFF0E0E0E),
-    surfaceVariant: Color(0XFF009A49),
+    surfaceContainerHighest: Color(0XFF009A49),
     inversePrimary: Color(0XFF58028C),
     secondary: Color(0XFF58028C),
     inverseSurface: Color(0XFF0E0E0E),
-    background: Color(0XFF58028C),
     onSecondary: Color(0X7FB1B0B0),
     primary: Color(0XFF0184D6),
   );

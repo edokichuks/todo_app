@@ -20,6 +20,7 @@ class UserRepositoryImpl implements UserRepository {
   final LocalStorageRepo _storage;
 
   final Ref _ref;
+  // ignore: unused_field
   final RestClient _restClient;
 
   // @override

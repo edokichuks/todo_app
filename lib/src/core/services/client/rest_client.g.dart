@@ -14,6 +14,7 @@ class _RestClient implements RestClient {
     this.baseUrl,
   });
 
+  // ignore: unused_field
   final Dio _dio;
 
   String? baseUrl;

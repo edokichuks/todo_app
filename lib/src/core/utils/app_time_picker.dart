@@ -1,5 +1,10 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Package imports:
 import 'package:intl/intl.dart';
+
+// Project imports:
 import 'package:todo_app/src/core/utils/utils_exports.dart';
 
 Future<String?> openTimePicker({
@@ -15,7 +20,7 @@ Future<String?> openTimePicker({
     builder: (BuildContext context, Widget? child) {
       return Theme(
         data: ThemeData.light().copyWith(
-          colorScheme: ColorScheme.light(
+          colorScheme: const ColorScheme.light(
             primary:
                 AppColors.primary, // Change the color to match your app theme
           ),
@@ -40,6 +45,5 @@ Future<String?> openTimePicker({
         DateFormat('h:mm a').format(formattedDateTime).toUpperCase();
     return formattedTime;
   }
-
   return null;
 }
