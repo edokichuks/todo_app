@@ -58,6 +58,9 @@ class _MyAppState extends State<MyApp> {
           builder: (context, widget) {
             return ScreenUtilInit(
               useInheritedMediaQuery: true,
+              minTextAdapt: true,
+              ensureScreenSize: true,
+              rebuildFactor: (old, data) => true,
               designSize: const Size(375, 812),
               builder: (context, child) {
                 return widget!;

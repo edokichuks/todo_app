@@ -1,3 +1,4 @@
+// Package imports:
 import 'package:equatable/equatable.dart';
 
 class TaskModel extends Equatable {
@@ -12,7 +13,8 @@ class TaskModel extends Equatable {
     this.title,
     this.firstItem,
     this.startTime,
-    this.endTime,this.completed,
+    this.endTime,
+    this.completed,
   });
 
   factory TaskModel.fromJson(Map<String, dynamic> json) => TaskModel(
@@ -40,7 +42,6 @@ class TaskModel extends Equatable {
     String? startTime,
     String? endTime,
     bool? completed,
-
   }) {
     return TaskModel(
       id: id ?? this.id,
@@ -48,7 +49,7 @@ class TaskModel extends Equatable {
       firstItem: firstItem ?? this.firstItem,
       endTime: endTime ?? this.endTime,
       startTime: startTime ?? this.startTime,
-      completed: completed?? this.completed,
+      completed: completed ?? this.completed,
     );
   }
 

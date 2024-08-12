@@ -3,9 +3,11 @@
 // Dart imports:
 import 'dart:convert';
 
+// Flutter imports:
+import 'package:flutter/material.dart' show debugPrint;
+
 // Package imports:
 import 'package:dio/dio.dart';
-import 'package:flutter/material.dart' show debugPrint;
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 // Project imports:

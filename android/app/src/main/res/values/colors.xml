@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-   <color name="background_color">#131f43</color>
+<!-- 131f43 -->
+   <color name="background_color">#3399FE</color>
 </resources>

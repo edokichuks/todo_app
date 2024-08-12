@@ -4,9 +4,9 @@
 
 // Package imports:
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:todo_app/src/application/repositories/task/task_repo.dart';
 
 // Project imports:
+import 'package:todo_app/src/application/repositories/task/task_repo.dart';
 import 'package:todo_app/src/core/utils/utils_exports.dart';
 import 'package:todo_app/src/features/task/model/task_model.dart';
 import 'package:todo_app/src/features/task/notifiers/task_state.dart';

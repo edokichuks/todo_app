@@ -20,7 +20,7 @@ final class TaskRepository {
   final LocalStorageRepo storage;
 
   void saveTaskList(List<TaskModel> tasks) async {
-     List<Map<String, dynamic>> taskJsonList =
+    List<Map<String, dynamic>> taskJsonList =
         tasks.map((task) => task.toJson()).toList();
     await storage.put(HiveKeys.tasks, json.encode(taskJsonList));
   }

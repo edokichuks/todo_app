@@ -6,7 +6,8 @@ class TaskState {
   TaskState({
     required this.loadState,
     required this.taskList,
-    required this.errorMessage,required this.progress,
+    required this.errorMessage,
+    required this.progress,
   });
   factory TaskState.initial() {
     return TaskState(
@@ -34,7 +35,7 @@ class TaskState {
       loadState: loadState ?? this.loadState,
       taskList: tasks ?? taskList,
       errorMessage: errorMessage ?? this.errorMessage,
-      progress: progress?? this.progress,
+      progress: progress ?? this.progress,
     );
   }
 }
