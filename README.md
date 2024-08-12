@@ -32,7 +32,7 @@
 - `flutter_screenutil: ^5.9.0`
 - `retrofit: ^4.0.3`
 - `json_annotation: ^4.7.0`
-- `hive_flutter: ^1.1.0`
+- `shared_preferences: ^2.3.1`
 - `lottie: ^2.7.0`
 - `dio: ^5.4.0`
 - `intl: ^0.19.0`
