@@ -1,51 +1,53 @@
-# DO-IT
+# Todo App
 
-App Features
+## Key Features
 
-> Fingerprint Authentication sign-in
-> 
-> Image picking implementation from either gallery or camera
-> 
-> Progress rate animation and custom painted 
->
+### To-Do Functionality
+- **Create & Manage To-Dos**: Users can add, view, and delete to-do items.
+- **Local Storage**: To-do tasks are stored locally using `shared_preferences` to ensure persistence across app launches.
 
-App Design
+### API Integration
+- **Fetch Data**: Retrieves and displays photos from the external API `https://jsonplaceholder.typicode.com/photos`.
+- **Offline Storage**: Stores the first 20 fetched items locally for offline access.
 
-> The Design given
+### UI & State Management
+- **Material Design**: The app's UI follows Material Design principles and is responsive across various screen sizes.
+- **State Management**: Uses Riverpod for managing and persisting the state across the application.
 
-- [Figma Design](https://www.figma.com/file/KPAjq7QeMzgcqZJPhWJk17/Project-management-app-(Test)-(Copy)?type=design&node-id=0-1&mode=design&t=9u1u9mZvrmqbtWFZ-0)
+### Evaluation Criteria
+- **Design & UI/UX**: Adherence to design principles and user experience.
+- **State Management**: Effective and clean state management practices.
+- **Offline Storage**: Proper implementation of local data storage.
+- **Code Quality**: Emphasis on readability, maintainability, and best practices.
 
+## App Code Structure
+- **Clean Architecture**: The app is structured using clean architecture principles, focusing on separation of concerns and scalability. This ensures the codebase is maintainable and adaptable to future changes.
 
+## App Library Dependencies
+- **local_auth**: For implementing fingerprint authentication.
+- **shared_preferences**: For storing to-do tasks locally.
+- **local_auth** : This Flutter plugin provides means to perform local, on-device authentication of the user.
 
-App Code Structure
+## Additional Packages Used
+- `flutter_screenutil: ^5.9.0`
+- `retrofit: ^4.0.3`
+- `json_annotation: ^4.7.0`
+- `hive_flutter: ^1.1.0`
+- `lottie: ^2.7.0`
+- `dio: ^5.4.0`
+- `intl: ^0.19.0`
+- `hooks_riverpod: ^2.4.9`
+- `cached_network_image: ^3.2.3`
+- `flutter_svg: ^2.0.9`
+- `flutter_staggered_animations`
+- `equatable: ^2.0.5`
 
-> Clean architecture patten is used in this app and with seperation of concerns and responsiveness in mind, making the app very maintainable and scalable.
+## App Links
+- **Todo App APK Link**: [APK Link](https://drive.google.com/file/d/1pcmpr1wpSa3DwHXMDpyCDNYzqvXhDeDz/view?usp=drivesdk)
+- **Appetize Link**: [Appetize Link](https://appetize.io/app/vqfbzn4zf25szwnc2wzmbttuz4?device=pixel4&osVersion=11.0&scale=75)
 
-App Library Dependence
-
-> [image_picker](https://pub.dev/packages/image_picker)
-
-- A Flutter plugin for iOS and Android for picking images from the image library, and taking new pictures.
-
-> [local_auth](https://pub.dev/packages/local_auth)
-
-- This Flutter plugin provides means to perform local, on-device authentication of the user.
-
-...
-
-#### App APK Link
-
-- [DO-IT](https://drive.google.com/file/d/1pcmpr1wpSa3DwHXMDpyCDNYzqvXhDeDz/view?usp=drivesdk)
-
-#### App Appetize link
-
-- [Appetize link ](https://appetize.io/app/vqfbzn4zf25szwnc2wzmbttuz4?device=pixel4&osVersion=11.0&scale=75)
-
-##### Short video clip
-
- - [Video url](https://drive.google.com/file/d/1ppHZWlZ9Pkrrl4FrZvNqCiKg-zMpiuBS/view?usp=drivesdk)
-
-https://github.com/edokichuks/project_management_app/assets/92238247/0e7a54b5-4147-4f06-9ce5-9e1a64b29159
+## Short Video Clip
+- **Video Demo**: [Short Video Clip](https://drive.google.com/file/d/1ppHZWlZ9Pkrrl4FrZvNqCiKg-zMpiuBS/view?usp=drivesdk)
 
 
 
