@@ -63,6 +63,17 @@ class _PhotosScreenState extends ConsumerState<PhotosScreen> {
           message: photoState.errorMessage,
           title: 'Error',
           messageType: MessageType.error);
+      if (photoState.photoList.isNotEmpty) {
+        Future.delayed(
+          const Duration(
+            seconds: 2,
+          ),
+          () => AppOverLay.of(context).showMessage(
+              message: 'Cached photo list loaded successfully',
+              title: 'Success',
+              messageType: MessageType.success),
+        );
+      }
     }
   }
 
@@ -85,9 +96,15 @@ class _PhotosScreenState extends ConsumerState<PhotosScreen> {
                   ),
                 ),
               ),
-              const YMargin(8),
+              const YMargin(16),
               photoState.loadState.isLoading
-                  ? const Center(child: AppLoader())
+                  ? const Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Center(child: AppLoader()),
+                      ],
+                    )
                   : AnimiateGridview(
                       photoList: photoState.photoList,
                     ),

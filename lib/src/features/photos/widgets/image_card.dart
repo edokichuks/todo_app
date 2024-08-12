@@ -38,6 +38,7 @@ class ImageCard extends StatelessWidget {
         children: [
           AppImageView(
             height: w / 3.2,
+            placeHolder: 'assets/png/2.jpg',
             width: w,
             radius: BorderRadius.vertical(
               top: Radius.circular(20.r),

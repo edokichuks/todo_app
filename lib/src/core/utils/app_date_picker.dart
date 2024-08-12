@@ -7,7 +7,6 @@ import 'package:todo_app/src/core/utils/utils_exports.dart';
 
 // Package imports:
 
-
 Future<String?> openDatePicker({
   required BuildContext context,
 }) async {

@@ -17,5 +17,5 @@ class HiveKeys {
   static const String savedMeals = 'savedMeals';
   static const String savedChefs = 'savedChefs';
   static const String display = 'display';
-  static const String balanceVisibility = 'balanceVisibility';
+  static const String tasks = 'taks_saved';
 }

@@ -10,7 +10,7 @@ import 'package:todo_app/src/core/utils/styles/theme_helper.dart';
 import 'package:todo_app/src/core/utils/utils_exports.dart';
 import 'package:todo_app/src/features/home/widgets/home_app_header.dart';
 import 'package:todo_app/src/features/home/widgets/home_card.dart';
-import 'package:todo_app/src/features/home/widgets/task_card.dart';
+import 'package:todo_app/src/features/home/widgets/home_task_list.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -42,17 +42,8 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
             const YMargin(16),
-            ListView.separated(
-              separatorBuilder: (context, index) {
-                return const YMargin(16);
-              },
-              physics: const NeverScrollableScrollPhysics(),
-              itemCount: 10,
-              shrinkWrap: true,
-              itemBuilder: (_, index) {
-                return const TaskCard();
-              },
-            ),
+            const TaskList(),
+            const YMargin(16),
           ],
         ),
       ),

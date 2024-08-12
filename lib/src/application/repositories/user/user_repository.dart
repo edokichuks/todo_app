@@ -12,14 +12,4 @@ abstract interface class UserRepository {
   CurrentState getCurrentState();
   bool? getRememberMe();
   void saveRememberMe(bool val);
-
-  // Future<BaseResponse<User>> getUserProfile();
-
-  // Future<BaseResponse<User>> updateUserProfile(
-  //     {required UpdateUserModel data, required String userId});
-
-  String getFCMToken();
-  void saveFCMTokenLocally(String val);
-  bool getBalanceVisibility();
-  void setBalanceVisibility();
 }

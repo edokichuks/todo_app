@@ -2,15 +2,15 @@
 
 // Dart imports:
 
-// Package imports:
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Package imports:
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 // Project imports:
 import 'package:todo_app/src/application/repositories/photos/photo_repo.dart';
-import 'package:todo_app/src/core/config/exceptions/app_exceptions.dart';
 import 'package:todo_app/src/core/utils/utils_exports.dart';
-import 'package:todo_app/src/features/photos/model/photo_model/photo_model.dart';
 import 'package:todo_app/src/features/photos/notifiers/photo_state.dart';
 
 class PhotoNtifier extends AutoDisposeNotifier<PhotoState> {
@@ -46,7 +46,7 @@ class PhotoNtifier extends AutoDisposeNotifier<PhotoState> {
       }
     } catch (error) {
       debugPrint('In notifier: ${error.toString()}');
-      final savedPhotos = _photoRepository.getMealCategoriesLocally();
+      final savedPhotos = _photoRepository.getSavedPhotos();
       state = state.copyWith(
           loadState: LoadState.error,
           errorMessage: 'No Internet connection',

@@ -9,7 +9,6 @@ import 'slide_from_bottom.dart';
 
 // Package imports:
 
-
 class AnimatedBottomNavBar extends StatefulWidget {
   const AnimatedBottomNavBar({
     super.key,

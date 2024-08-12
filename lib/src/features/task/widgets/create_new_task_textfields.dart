@@ -211,26 +211,29 @@ class DateTextField extends StatelessWidget {
 class TaskNameTextField extends StatelessWidget {
   const TaskNameTextField({
     super.key,
+    required this.contrl,
   });
+  final TextEditingController contrl;
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
+        controller: contrl,
         decoration: InputDecoration(
-      hintText: 'UI Designs',
-      hintStyle: const TextStyle(color: AppColors.borderGrey),
-      enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(12.r),
-        borderSide: const BorderSide(
-          color: AppColors.borderGrey,
-        ),
-      ),
-      border: OutlineInputBorder(
-        borderSide: const BorderSide(
-          color: AppColors.borderGrey,
-        ),
-        borderRadius: BorderRadius.circular(12.r),
-      ),
-    ));
+          hintText: 'UI Designs',
+          hintStyle: const TextStyle(color: AppColors.borderGrey),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(12.r),
+            borderSide: const BorderSide(
+              color: AppColors.borderGrey,
+            ),
+          ),
+          border: OutlineInputBorder(
+            borderSide: const BorderSide(
+              color: AppColors.borderGrey,
+            ),
+            borderRadius: BorderRadius.circular(12.r),
+          ),
+        ));
   }
 }

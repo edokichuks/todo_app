@@ -5,6 +5,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:dio/dio.dart';
+import 'package:flutter/material.dart' show debugPrint;
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 // Project imports:
@@ -30,19 +31,19 @@ final class PhotoRepository {
         '_start': start,
         '_limit': limit,
       });
-      saveMealCategoriesLocally(r);
-      var localCategories = getMealCategoriesLocally();
-      print('IN REPO SAVED LOCAL: ${localCategories.length}');
+      saveFetcedPhotos(r);
+      var localCategories = getSavedPhotos();
+      debugPrint('IN REPO SAVED LOCAL: ${localCategories.length}');
       return ($s1: '', $s2: r);
     } on DioExceptionType catch (e) {
-      var localCategories = getMealCategoriesLocally();
-      print('ERROR: IN REPO SAVED LOCAL: ${localCategories.length}');
+      var localCategories = getSavedPhotos();
+      debugPrint('ERROR: IN REPO SAVED LOCAL: ${localCategories.length}');
       return AppException.handleError((e), data: localCategories);
     }
   }
 
-  void saveMealCategoriesLocally(List<PhotoModel> photos) async {
-    final initList = getMealCategoriesLocally();
+  void saveFetcedPhotos(List<PhotoModel> photos) async {
+    final initList = getSavedPhotos();
     final first20 = [
       ...initList,
       ...photos,
@@ -52,9 +53,21 @@ final class PhotoRepository {
     }
   }
 
-  List<PhotoModel> getMealCategoriesLocally() {
+  List<PhotoModel> getSavedPhotos() {
     var data = storage.get(HiveKeys.photos) ?? [];
-    List newdata = json.decode(data);
+
+    List newdata;
+    if (data is String) {
+      newdata = json.decode(data) as List;
+      debugPrint('IF STRING: data is $newdata');
+    } else if (data is List) {
+      newdata = data;
+      debugPrint('ELSE IF LIST:new data is $newdata');
+    } else {
+      newdata = [];
+      debugPrint('ELSE:new data is $newdata');
+    }
+
     var photos =
         List<PhotoModel>.from(newdata.map((e) => PhotoModel.fromJson(e)))
             .toList();

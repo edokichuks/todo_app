@@ -19,6 +19,7 @@ class UserRepositoryImpl implements UserRepository {
   );
   final LocalStorageRepo _storage;
 
+  // ignore: unused_field
   final Ref _ref;
   // ignore: unused_field
   final RestClient _restClient;
@@ -73,34 +74,8 @@ class UserRepositoryImpl implements UserRepository {
   void saveRefreshToken(String token) async {
     await _storage.put(HiveKeys.refreshToken, token);
   }
-
-  @override
-  String getFCMToken() {
-    return _storage.get(HiveKeys.fcmToken) ?? "";
-  }
-
-  @override
-  void saveFCMTokenLocally(String val) async {
-    await _storage.put(HiveKeys.fcmToken, val);
-  }
-
-  @override
-  bool getBalanceVisibility() {
-    return _storage.get(HiveKeys.balanceVisibility) ?? true;
-  }
-
-  @override
-  void setBalanceVisibility() async {
-    final visible = _storage.get(HiveKeys.balanceVisibility) ?? true;
-    await _storage.put(HiveKeys.balanceVisibility, !visible);
-    _ref.read(walletBalanceVisibility.notifier).state = !visible;
-  }
 }
 
 final userRepositoryProvider = Provider<UserRepository>(
   (ref) => UserRepositoryImpl(ref.read(localDB), ref, ref.read(restClient)),
-);
-
-final walletBalanceVisibility = StateProvider<bool>(
-  (ref) => ref.read(userRepositoryProvider).getBalanceVisibility(),
 );

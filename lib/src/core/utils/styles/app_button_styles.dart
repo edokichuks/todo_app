@@ -6,7 +6,6 @@ import 'package:todo_app/src/core/utils/colors.dart';
 
 // Package imports:
 
-
 class AppButtonStyle {
   final Color background;
   final Color textColor;

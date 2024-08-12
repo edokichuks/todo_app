@@ -1,5 +1,6 @@
+// Flutter imports:
+
 // Project imports:
-import 'package:flutter/material.dart';
 import 'package:todo_app/src/core/utils/enums.dart';
 import 'package:todo_app/src/features/photos/model/photo_model/photo_model.dart';
 
@@ -25,7 +26,7 @@ class PhotoState {
     LoadState? loadState,
     List<PhotoModel>? photos,
     String? errorMessage,
-  }) {    
+  }) {
     return PhotoState(
       loadState: loadState ?? this.loadState,
       photoList: photos ?? photoList,

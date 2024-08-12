@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 // Project imports:
-import 'package:todo_app/src/core/utils/colors.dart';
 
 class AppLoader extends StatefulWidget {
   const AppLoader({super.key, this.size = 20.0});
