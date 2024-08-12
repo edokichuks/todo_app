@@ -7,7 +7,7 @@ class AssetsImages {
   static const String mockup1 = "${AppConstants.imagePath}mockup1.png";
   static const String mockup2 = "${AppConstants.imagePath}mockup2.png";
   static const String mockup3 = "${AppConstants.imagePath}mockup3.png";
-  static const String logo = "${AppConstants.imagePath}logo.png";
+  static const String logo = "assets/png/app_logo.png";
   static const String chef = "${AppConstants.imagePath}chef.png";
   static const String google = "${AppConstants.imagePath}google.png";
   static const String map = "${AppConstants.imagePath}map.png";

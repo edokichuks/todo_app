@@ -17,7 +17,7 @@ class HomeCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       // width: 300,
-      height: 150.h,
+      // height: 150.h,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(24),
         gradient: LinearGradient(
@@ -45,7 +45,7 @@ class HomeCard extends StatelessWidget {
             '15 Tasks',
             style: theme.textTheme.s16w500.copyWith(color: AppColors.white),
           ),
-          const YMargin(8),
+          const YMargin(24),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

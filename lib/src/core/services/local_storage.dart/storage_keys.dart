@@ -11,7 +11,7 @@ class HiveKeys {
   static const String userLastPositon = "last_location.dart";
   static const String userAddress = 'user_address';
   static const String addresses = 'addresses';
-  static const String categories = 'meal_categories';
+  static const String photos = 'photos_fetched';
   static const String fcmToken = 'fcmToken';
   static const String hasSavedFcmTokenRemotely = 'hasSavedFcmTokenRemotely';
   static const String savedMeals = 'savedMeals';

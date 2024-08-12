@@ -47,6 +47,7 @@ class _SlideFromBottomWidgetState extends State<SlideFromBottomWidget>
   Widget build(BuildContext context) {
     super.build(context);
     return InkWell(
+      splashColor: Colors.transparent,
       onTap: () => widget.onTap.call(_controller),
       child: SlideTransition(
         position: Tween<Offset>(

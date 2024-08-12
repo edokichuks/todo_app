@@ -51,9 +51,11 @@ class _AppLoaderState extends State<AppLoader>
               height: widget.size,
               width: widget.size,
               child: SvgPicture.asset(
-                'assets/svgs/load.svg',
-                colorFilter: const ColorFilter.mode(
-                    AppColors.frodorOrange, BlendMode.srcIn),
+                'assets/svgs/app_logo.svg',
+                // colorFilter: const ColorFilter.mode(
+                //   AppColors.primary,
+                //   BlendMode.srcIn,
+                // ),
               ),
             ),
           ),

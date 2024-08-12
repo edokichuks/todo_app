@@ -22,24 +22,6 @@ class UserRepositoryImpl implements UserRepository {
   final Ref _ref;
   // ignore: unused_field
   final RestClient _restClient;
-
-  // @override
-  // User getUser() {
-  //   final response = _storage.get<String?>(HiveKeys.user);
-  //   final user = User.fromJson(
-  //     response == null
-  //         ? {}
-  //         : json.decode(response as String) as Map<String, dynamic>,
-  //   );
-  //   return user;
-  // }
-
-  // @override
-  // Future<void> updateUser(User user) async {
-  //   await _storage.put(HiveKeys.user, json.encode(user));
-  //   _ref.read(currentUserProvider.notifier).state = user;
-  // }
-
   @override
   Future<void> saveRememberMe(bool value) async {
     await _storage.put(HiveKeys.rememberMe, value);
@@ -102,29 +84,6 @@ class UserRepositoryImpl implements UserRepository {
     await _storage.put(HiveKeys.fcmToken, val);
   }
 
-  // @override
-  // Future<BaseResponse<User>> getUserProfile() async {
-  //   try {
-  //     final r = await _restClient.getUserProfile();
-  //     await updateUser(r.data!);
-  //     return r;
-  //   } on DioException catch (e) {
-  //     return AppException.handleError(e);
-  //   }
-  // }
-
-  // @override
-  // Future<BaseResponse<User>> updateUserProfile(
-  //     {required UpdateUserModel data, required String userId}) async {
-  //   try {
-  //     final r = await _restClient.updateUser(data, userId);
-  //     await updateUser(r.data!);
-  //     return r;
-  //   } on DioException catch (e) {
-  //     return AppException.handleError(e);
-  //   }
-  // }
-
   @override
   bool getBalanceVisibility() {
     return _storage.get(HiveKeys.balanceVisibility) ?? true;
@@ -141,11 +100,6 @@ class UserRepositoryImpl implements UserRepository {
 final userRepositoryProvider = Provider<UserRepository>(
   (ref) => UserRepositoryImpl(ref.read(localDB), ref, ref.read(restClient)),
 );
-
-// final currentUserProvider = StateProvider<User>((ref) {
-//   final user = ref.read(userRepositoryProvider).getUser();
-//   return user;
-// });
 
 final walletBalanceVisibility = StateProvider<bool>(
   (ref) => ref.read(userRepositoryProvider).getBalanceVisibility(),

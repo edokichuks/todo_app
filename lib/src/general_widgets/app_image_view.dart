@@ -137,28 +137,31 @@ class AppImageView extends StatelessWidget {
         fit: fit ?? BoxFit.cover,
         imageUrl: url!,
         color: color,
-        // placeholder: (context, url) => const SizedBox(
-        //     height: 30, width: 30, child: Center(child: AppLoader())
-        // LinearProgressIndicator(
-        //   color: Colors.grey.shade200,
-        //   backgroundColor: Colors.grey.shade100,
-        // ),
-        // ),
+        placeholder: (context, url) => SizedBox(
+          height: 30,
+          width: 30,
+          child:
+              // Center(child: AppLoader())
+              LinearProgressIndicator(
+            color: Colors.grey.shade200,
+            backgroundColor: Colors.grey.shade100,
+          ),
+        ),
 
-        progressIndicatorBuilder: (context, url, progress) {
-          final rand = Random().nextDouble();
+        // progressIndicatorBuilder: (context, url, progress) {
+        //   final rand = Random().nextDouble();
 
-          return AnimatedOpacity(
-            opacity: rand / 5,
-            duration: const Duration(milliseconds: 300),
-            child: Image.asset(
-              placeHolder,
-              height: height,
-              width: width,
-              fit: fit ?? BoxFit.cover,
-            ),
-          );
-        },
+        //   return AnimatedOpacity(
+        //     opacity: rand / 5,
+        //     duration: const Duration(milliseconds: 300),
+        //     child: Image.asset(
+        //       placeHolder,
+        //       height: height,
+        //       width: width,
+        //       fit: fit ?? BoxFit.cover,
+        //     ),
+        //   );
+        // },
 
         errorWidget: (context, url, error) => Image.asset(
           placeHolder,

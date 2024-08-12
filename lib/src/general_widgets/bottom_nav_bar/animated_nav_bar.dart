@@ -2,12 +2,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-// Package imports:
-
 // Project imports:
 import 'package:todo_app/src/core/utils/app_dimensions.dart';
 import 'package:todo_app/src/core/utils/utils_exports.dart';
 import 'slide_from_bottom.dart';
+
+// Package imports:
+
 
 class AnimatedBottomNavBar extends StatefulWidget {
   const AnimatedBottomNavBar({

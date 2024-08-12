@@ -11,6 +11,7 @@ import 'package:todo_app/src/core/config/dio_utils.dart/auth_strings.dart';
 import 'package:todo_app/src/core/config/dio_utils.dart/header_interceptors.dart';
 import 'package:todo_app/src/core/services/local_storage.dart/local_storage_repo_impl.dart';
 import 'package:todo_app/src/core/services/local_storage.dart/storage_keys.dart';
+import 'package:todo_app/src/features/photos/model/photo_model/photo_model.dart';
 
 part 'rest_client.g.dart';
 
@@ -18,25 +19,10 @@ part 'rest_client.g.dart';
 abstract class RestClient {
   factory RestClient(Dio dio, {String baseUrl}) = _RestClient;
 
-//<====================> Authentication <====================>
-  // @POST('/auth/login')
-  // Future<BaseResponse<LoginResponse>> login(@Body() LoginRequest data);
-
-  // @GET('/users/me')
-  // Future<BaseResponse> getUserProfile();
-  // @GET('/users/')
-  // Future<BaseResponse<List<User>>> getAllUsers(
-  //   @Queries() Map<String, dynamic> queries,
-  // );
-  // @DELETE('/addresses/{id}')
-  // Future<BaseResponse> deleteAddress({@Path() required String id});
-  // @PATCH('/addresses/{id}/default')
-  // Future<BaseResponse<LocationModel>> makeAddressDefault(
-  //     {@Path() required String id});
-
-  //<====================> Carts <====================>
-  // @PUT('/carts/add-item')
-  // Future<BaseResponse<CartResponse>> addToCart(@Body() CartRequest data);
+  @GET('/photos')
+  Future<List<PhotoModel>> getAllPhotos(
+    @Queries() Map<String, dynamic> queries,
+  );
 }
 
 ////////////////////////////////////////////////////////////////

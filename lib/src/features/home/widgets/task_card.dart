@@ -18,9 +18,15 @@ class TaskCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12.r),
-        color: Colors.white,
-      ),
+          borderRadius: BorderRadius.circular(12.r),
+          color: Colors.white,
+          boxShadow: const [
+            BoxShadow(
+              blurRadius: 2,
+              spreadRadius: 2,
+              color: AppColors.grey08,
+            )
+          ]),
       padding: EdgeInsets.symmetric(vertical: 8.h),
       child: ListTile(
         leading: Container(
