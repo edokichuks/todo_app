@@ -42,6 +42,16 @@ class _CreateTaskScreenState extends ConsumerState<CreateTaskScreen> {
   }
 
   void createTask() async {
+    if (titleContrl.text.isEmpty ||
+        startTimeContrl.text.isEmpty ||
+        endTimeContrl.text.isEmpty ||
+        dateContrl.text.isEmpty) {
+      AppOverLay.of(context).showMessage(
+          message: 'All fields are required',
+          messageType: MessageType.error,
+          title: 'Error');
+      return;
+    }
     final id = Random().nextInt(1000000);
     final taskData = TaskModel(
         id: id,

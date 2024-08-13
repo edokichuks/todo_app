@@ -46,7 +46,7 @@ class _PhotosScreenState extends ConsumerState<PhotosScreen> {
         _scrollController.position.maxScrollExtent) {
       ref
           .read(photoNtifierProvider.notifier)
-          .fetchPhotos(loadMore: true, limit: 10);
+          .fetchPhotos(loadMore: true, limit: 5);
     }
   }
 
