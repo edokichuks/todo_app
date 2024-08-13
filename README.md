@@ -43,11 +43,11 @@
 - `equatable: ^2.0.5`
 
 ## App Links
-- **Todo App APK Link**: [APK Link](https://drive.google.com/file/d/1pcmpr1wpSa3DwHXMDpyCDNYzqvXhDeDz/view?usp=drivesdk)
-- **Appetize Link**: [Appetize Link](https://appetize.io/app/vqfbzn4zf25szwnc2wzmbttuz4?device=pixel4&osVersion=11.0&scale=75)
+- **Todo App APK Link**: [APK Link](https://drive.google.com/file/d/1IUVxBi1kDC9xH5m3Rld4JTdJeYZxfuWW/view?usp=drivesdk)
+- **Appetize Link**: [Appetize Link](https://appetize.io/app/b_md76pnxqvv6hf2j3oddxqjtrsa)
 
-## Short Video Clip
-- **Video Demo**: [Short Video Clip](https://drive.google.com/file/d/1ppHZWlZ9Pkrrl4FrZvNqCiKg-zMpiuBS/view?usp=drivesdk)
+## Walk Throgh Video Clip
+- **Video Demo**: [Video Clip](https://drive.google.com/file/d/1IrG5kTmdkYCFiBAXt1nsRM3jOID6Z6dm/view?usp=drivesdk)
 
 
 
