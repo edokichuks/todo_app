@@ -21,7 +21,7 @@
 - **Code Quality**: Emphasis on readability, maintainability, and best practices.
 
 ## App Code Structure
-- **Clean Architecture**: The app is structured using clean architecture principles, focusing on separation of concerns and scalability. This ensures the codebase is maintainable and adaptable to future changes.
+- **Clean Architecture**: The app is structured using clean architecture, focusing on separation of concerns and scalability. This ensures the codebase is maintainable and adaptable to future changes.
 
 ## App Library Dependencies
 - **local_auth**: For implementing fingerprint authentication.
